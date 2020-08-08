@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Programming Learning</string>
+    <string name="cplusplus">C++</string>
+    <string name="data_structure">Data Structure</string>
+    <string name="algorithm">Algorithm</string>
+    <string-array name="cplusplusitem">
+        <item>library</item>
+        <item>Input-Output System</item>
+        <item>Variable</item>
+        <item>Array</item>
+        <item>String</item>
+        <item>File input-output System</item>
+        <item>Min-Max</item>
+    </string-array>
+    <string-array name="algorithmitem">
+        <item>nCr modulo Prime Power</item>
+        <item>Sum of nCi where i is upto k</item>
+        <item>Number of Solutions of a Equation</item>
+        <item>Prime Factorization Large</item>
+        <item>Prime Counting Function</item>
+        <item>Power Tower</item>
+        <item>Mobius Function</item>
+        <item>Modular Inverse</item>
+        <item>nCr modulo Prime Power</item>
+        <item>nCr modulo Prime Power</item>
+        <item>nCr modulo Prime Power</item>
+
+
+    </string-array>
+    <string name="title_activity_data_structure_item">DataStructure_item</string>
+    <string name="title_activity_note">noteActivity</string>
+
+</resources>

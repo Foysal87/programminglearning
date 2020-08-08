@@ -1,0 +1,76 @@
+///Complexity-( prime^k)*logn
+ll F[N];///N is maximum value of prime^k
+void pre(ll mod,ll p)  /// mod is p^a, p is prime
+{
+    F[0] = 1;
+    for(int i=1; i<=mod; i++)
+    {
+        if(i%p!= 0) F[i]=(F[i-1]*i)%mod; /// we keep in F factorial with the
+        terms which are coprime with p
+        else F[i]=F[i-1];
+    }
+}
+ll fact2(ll n,ll mod)
+{
+    ll cycle = n/mod;
+    ll n2=n%mod;
+    return (qpow(F[mod],cycle,mod)*F[n2])%mod;
+}
+pll fact(ll N,ll p,ll mod)  /// returns highest power of p that divides N
+{
+    and the coprime with p part of N! %mod
+    ll n = N;
+    ll ord = 0;
+    while(n > 0)
+    {
+        n /= p;
+        ord += n;
+    }
+    ll ans = 1;
+    n = N;
+    while(n > 0)
+    {
+        ans =(ans*fact2(n,mod))%mod;
+        n/=p;
+    }
+    return MP(ord,ans);
+}
+ll modInverse(ll a, ll m,ll p) /// modular inverse of a mod m, where m=p^x type
+{
+    ll pr=m/p;
+    pr*=(p-1);
+    pr--;
+    return qpow(a,pr,m);
+}
+///a^k
+ll get(ll a,ll k)
+{
+    if(a==1) return 1;
+    ll ans=1;
+    while(k) ans*=a,--k;
+    return ans;
+}
+///C(n,r) modulo p^k
+ll nCrPower(ll n,ll r,ll p,ll k)
+{
+    ll mod=get(p,k),temp;
+    pre(mod,p);
+    pll x=fact(n,p,mod),y=fact(r,p,mod),z=fact(n-r,p,mod);
+    ll mul=x.second*modInverse(y.second,mod,p);
+    mul%=mod;
+    mul*=modInverse(z.second,mod,p);
+    mul%=mod;
+    ll mul2=x.first-y.first-z.first;
+    mul*=qpow(p,mul2,mod);
+    mul%=mod;
+    return mul;
+}
+int32_t main()
+{
+    BeatMeScanf;
+    int i,j,k,n,m;
+
+    cout<<nCrPower(898989891010201LL,898989891010199LL,103,2)<
+        <nl;
+    return 0;
+}

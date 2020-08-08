@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bac7ef"
+    tools:context="com.example.foysal.programminglearning.Algorithm_item">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/note_editor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#ff22"
+        android:titleTextColor="#131212"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="11dp"></android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_below="@+id/note_editor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#0E5C99"
+        android:gravity="start|top"
+        android:maxLines="1"
+        android:hint="Title"
+        android:ellipsize="end"
+         />
+
+    <EditText
+        android:id="@+id/editText"
+        android:hint="Write something here"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editText1"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+
+
+
+</RelativeLayout>

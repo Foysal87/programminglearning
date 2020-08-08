@@ -1,0 +1,102 @@
+It declares :
+VARIABLE NAME[SIZE];
+
+____________________________________
+array is used when same types variable is huge.
+like 100 children age. you can't write a1,a2,a3,a4,a5.....a100.
+then we need array. we just take   int arr[100];
+____________________________________
+
+array indexing:
+array index start from 0 to size-1. like
+int arr[100]. arr[0] means 0th number to 99 number. you can't take a value in arr[100].
+
+____________________________________
+
+array variable types:
+you can take anything in variable place.
+int arr[100];
+float arr[100];
+vector<int>arr[100];
+pair<int>arr[100]
+
+____________________________________
+
+array sorting:
+int arr[100];
+if you take 10 values and you want to sort them. just write 
+
+     sort(arr,arr+10);
+
+if n values are taken..
+then sort(arr,arr+n);
+you can sort anything by this stl sort function. its too easier. complexity nlogn.
+now if your 1st value is taken in place 1 and 0th index have no value.and you want to sort.then you must use it.
+
+sort(arr+1,arr+n+1);
+____________________________________
+
+
+reverse array:
+you can reverse the array. just use reverse keyword.
+
+	reverse(arr,arr+n);
+____________________________________
+
+
+
+array element swap:
+if you want to swap 2 index value.
+	swap(arr[1st index],arr[2nd index]);
+
+____________________________________
+
+<==========CODE============>
+#include <bits/stdc++.h>
+using namespace std;
+int main () {
+    int arr[100];
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++) cin>>arr[i];
+
+    sort(arr,arr+n);
+
+     for(int i=0;i<n;i++) cout<<arr[i]<<" ";
+     cout<<endl;
+
+     reverse(arr,arr+n);
+
+     for(int i=0;i<n;i++) cout<<arr[i]<<" ";
+     cout<<endl;
+
+     swap(arr[0],arr[3]);
+
+     for(int i=0;i<n;i++) cout<<arr[i]<<" ";
+     cout<<endl;
+
+
+     return 0;
+
+
+}
+<====Input===>
+5
+4 3 7 2 9
+
+<===OUTPUT===>
+2 3 4 7 9
+9 7 4 3 2
+3 7 4 9 2
+
+<==========CODE============>
+
+#difference between declare a array in global and local
+there is no difference. but if we use codeblocks IDE. there is a problem. a specific range you can take.but globally you can take any range.
+locally: 500000(safe)
+globally: 10000000(safe)
+its depend on your ram.
+
+
+
+

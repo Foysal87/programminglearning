@@ -1,0 +1,159 @@
+#define maxn 405///maximum value of sqrt(n)
+inline int ksm(int x,int k)
+{
+    int
+    s=1;
+    for(; k; k>>=1,x=1ll*x*x%mod)if(k&1)s=1ll*s*x%mod;
+    return s;
+}
+inline int del(int x)
+{
+    return x<0?x+mod:x;
+}
+inline int add(int x)
+{
+    return x<mod?x:x-mod;
+}
+/** use ntt structure here**/
+typedef vector<int> vec;
+int n,v,rev,fac[maxn],inv[maxn],mul[maxn];
+int gd[maxn],g2d[maxn],fd[maxn],f2d[maxn],dlt[maxn];
+int A[maxn],B[maxn],C[maxn];
+int pre_[maxn],*pre=pre_+1,suf[maxn];
+inline void calc(int *h,int *out,int d,int k)
+{
+    int off=k-d-1;
+    mul[0]=1;
+    for(int i=1; i<=2*d+3; i++)
+    {
+        int s=(i+off)%mod;
+        s=del(s);
+        mul[i]=1ll*mul[i-1]*s%mod;
+    }
+    int len=1;
+    for(; len<3*d+5; len<<=1);;
+    vi a,b;
+    for(int i=0; i<=d; i++)
+    {
+        A[i]=1ll*h[i]*inv[i]%mod*inv[d-i]%mod;
+        if((d-i)&1)A[i]=mod-A[i];
+        a.eb(A[i]);
+    }
+    for(int i=0; i<=2*d; i++)B[i]=ksm((i-d+k)%mod,mod2),B[i]=del(B[i]),b.eb(B[i]);
+    vi c=ntt::multiply(a,b,mod);
+    while(sz(c)<len) c.eb(0);
+    for(int i=0; i<len; i++) C[i]=c[i];
+    for(int i=0; i<=d; i++)
+    {
+        out[i]=1ll*C[i+d]*mul[i+k-off]%mod*ksm(mul[i+k-doff-1],mod-2)%mod;
+        out[i]=del(out[i]);
+    }
+}
+void solve(int x,int *G,int *F)
+{
+    if(x==0)
+    {
+        G[0]=1;
+        F[0]=0;
+        return;
+    }
+    if(x&1)
+    {
+        solve(x-1,G,F);
+        for(int i=0; i<x; i++)gd[i]=G[i];
+        calc(gd,dlt,x-1,-1ll*(n+1)*rev%mod);
+        for(int i=0; i<x; i++)G[i]=1ll*G[i]*(i*v+x)%mod;
+        int p=1;
+        for(int i=1; i<=x; i++)p=1ll*p*(v*x+i)%mod;
+        G[x]=p;
+        for(int i=0; i<x; i++)
+        {
+            if((x-1)&1)F[i]-=dlt[i],F[i]=del(F[i]);
+            else F[i]+=dlt[i],F[i]=add(F[i]);
+            F[i]=1ll*F[i]*(i*v+x)%mod;
+        }
+        suf[x+1]=1;
+        for(int i=x; i>=0; i--
+           )suf[i]=1ll*suf[i+1]*(v*x+i)%mod;
+        pre[-1]=1;
+        for(int i=0; i<=x; i++)pre[i]=1ll*pre[i-1]*(n-iv*x)%mod,pre[i]=del(pre[i]);
+        p=0;
+        for(int i=0; i<x; i++)p=(p+1ll*suf[i+1]*pre[i1])%mod;
+        F[x]=p;
+        return;
+    }
+    int d=x>>1;
+    solve(d,G,F);
+    for(int i=0; i<=d; i++)gd[i]=G[i];
+    calc(gd,gd+d+1,d,d+1);
+    calc(gd,g2d,2*d,1ll*d*rev%mod);
+    calc(gd,dlt,2*d,-1ll*(n+1)*rev%mod);
+    for(int i=0; i<=d; i++)fd[i]=F[i];
+    calc(fd,fd+d+1,d,d+1);
+    calc(fd,f2d,2*d,1ll*d*rev%mod);
+    for(int i=0; i<=x; i++)
+    {
+        int s=1ll*dlt[i]*f2d[i]%mod;
+        if(d&1)s=mod-s;
+        F[i]=(1ll*g2d[i]*fd[i]+s)%mod;
+    }
+    for(int i=0; i<=x; i++)G[i]=1ll*gd[i]*g2d[i]%mod;
+}
+int m,F[maxn],G[maxn];
+inline int get(int x,int y)
+{
+    n=x,m=y;
+    v=sqrt(n+0.5);
+    rev=ksm(v,mod-2);
+    solve(v,G,F);
+    int fac=1;
+    for(int i=0; i<v; i++)fac=1ll*fac*G[i]%mod;
+    for(int i=v*v+1; i<=n; i++)fac=1ll*fac*i%mod;
+    for(int i=0; i<=v; i++)gd[i]=G[i];
+    calc(gd,dlt,v,-1ll*(n+1)*rev%mod);
+    pre[-1]=1;
+    for(int i=0; i<=v; i++)pre[i]=1ll*pre[i-1]*dlt[i]%mod;
+    suf[v]=1;
+    for(int i=v*v+1; i<=n; i++)suf[v]=1ll*suf[v]*i%mod;
+    for(int i=v-1; i>=0; i--)suf[i]=1ll*suf[i+1]*G[i]%mod;
+    int ans=0,cr=0;
+    for(int i=0; i<v&&(i+1)*v-1<=m; i++)
+    {
+        int t=1ll*suf[i+1]*pre[i1]%mod*F[i]%mod;
+        if((i*v)&1)t=mod-t;
+        ans+=t;
+        ans=add(ans);
+        cr=i+1;
+    }
+    ans=1ll*ans*ksm(fac,mod-2)%mod;
+    int C=fac,Mg=1;
+    for(int i=0; i<cr; i++)Mg=1ll*Mg*G[i]%mod;
+    int s=n-cr*v,cp=0;
+    for(int i=0; i<v&&(i+1)*v<=s; i++)Mg=1ll*Mg*G[i]%mod,cp=i+1;
+    for(int i=cp*v+1; i<=s; i++)Mg=1ll*Mg*i%mod;
+    C=1ll*C*ksm(Mg,mod-2)%mod;
+    for(int i=cr*v; i<=m; i++)
+    {
+        if(i!=cr*v)C=1ll*C*ksm(i,mod-2)%mod*(n-i+1)%mod;
+        ans+=C;
+        ans=add(ans);
+    }
+    for(int i=0; i<=v; i++)F[i]=G[i]=0;
+    return ans;
+}
+int32_t main()
+{
+    BeatMeScanf;
+    int i,j,k,m,t;
+    fac[0]=1;
+    for(int i=1; i<maxn; i++)fac[i]=1ll*fac[i-1]*i%mod;
+    inv[maxn-1]=ksm(fac[maxn-1],mod-2);
+    for(int i=maxn-2; i>=0; i--)inv[i]=1ll*inv[i+1]*(i+1)%mod;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n>>m;
+        cout<<get(n,m)<<nl;
+    }
+    return 0;
+}

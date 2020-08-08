@@ -1,0 +1,107 @@
+1.char	
+==>Character or small integer.	
+size==> 1byte	
+range ==> signed: -128 to 127
+          unsigned: 0 to 255
+
+2.short int
+==>(short)	Short Integer.	
+size==>2bytes	
+range ==> signed: -32768 to 32767
+	  unsigned: 0 to 65535
+
+3.int	
+==>Integer.	
+size==>4bytes	
+range==>signed: -2147483648 to 2147483647
+	unsigned: 0 to 4294967295
+
+4.long int
+==>(long)Long integer.	
+size==>4bytes	
+range==>signed: -2147483648 to 2147483647
+	unsigned: 0 to 4294967295
+
+5.bool	
+==>Boolean value. It can take one of two values: true or false.	
+size==>1byte	
+range==>true or false
+
+
+6.float	
+==>Floating point number.	
+size==>4bytes	
+range==>+/- 3.4e +/- 38 (~7 digits)
+
+
+7.double	
+==>Double precision floating point number.
+size==>8bytes	
+range==>+/- 1.7e +/- 308 (~15 digits)
+
+8.long double	
+==>Long double precision floating point number.	
+size==>8bytes	
+range==>+/- 1.7e +/- 308 (~15 digits)
+
+
+9.wchar_t
+==>Wide character.
+size==>2 or 4 bytes	
+range==>1 wide character
+
+
+
+<==========CODE============>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+ {
+  char ch;
+  short int si;
+  int a;
+  long long int lla;
+  bool bl;
+  float f;
+  double d;
+  long double d;
+  
+
+ return 0;
+ }
+<==========CODE============>
+
+
+***What is the difference between float and double?
+==>
+double has 2x more precision then float.
+
+float is a 32 bit IEEE 754 single precision Floating Point Number1 bit for the sign, (8 bits for the exponent, and 23* for the value), i.e. float has 7 decimal digits of precision.
+
+double is a 64 bit IEEE 754 double precision Floating Point Number (1 bit for the sign, 11 bits for the exponent, and 52* bits for the value), i.e. double has 15 decimal digits of precision.
+sometimes, double gives us wrong value. so be careful to using this two.
+
+***setprecision
+==>sets the floating point fixed. like you want to make 10 digit exact floating value. you must be use setprecision.
+
+
+<==========CODE============>
+#include <bits/stdc++.h>
+using namespace std;
+int main () {
+  double f =3.14159;
+  cout << setprecision(5) << f << endl;
+  cout << setprecision(9) << f << endl;
+  cout << fixed;
+  cout << setprecision(5) << f << endl;
+  cout << setprecision(9) << f << endl;
+  return 0;
+}
+
+<===OUTPUT===>
+3.1416
+3.14159
+3.14159
+3.141590000
+
+<==========CODE============>

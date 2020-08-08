@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#383b69"
+    tools:context="com.example.foysal.programminglearning.Algorithm_activity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ff22"
+        android:id="@+id/toolbar_algorithm"
+        android:titleTextColor="#131212"
+        android:title="@string/algorithm"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        >
+    </android.support.v7.widget.Toolbar>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/algorithmListView"
+        android:padding="5dp"
+        android:dividerHeight="2dp"
+        android:divider="#383b69"
+        android:listSelector="#08e738"
+        android:background="#527359"
+        android:layout_below="@+id/toolbar_algorithm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+</RelativeLayout>

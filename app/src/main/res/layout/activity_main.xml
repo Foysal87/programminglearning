@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#383b69"
+    tools:context="com.example.foysal.programminglearning.MainActivity">
+   <android.support.v7.widget.Toolbar
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="#ff22"
+       android:id="@+id/toolbar"
+       android:titleTextColor="#131212"
+
+       >
+   </android.support.v7.widget.Toolbar>
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="107dp"
+        android:text="C++"
+        android:background="#2fe80a"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="ALGORITHM"
+        android:background="#2fe80a"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/btn1"
+        android:layout_alignLeft="@+id/btn1"
+        android:layout_alignStart="@+id/btn1"
+        android:layout_alignRight="@+id/btn1"
+        android:layout_alignEnd="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="38dp"
+        android:text="Code Book"
+        android:background="#2fe80a"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/btn2"
+        android:layout_alignLeft="@+id/btn2"
+        android:layout_alignStart="@+id/btn2"
+        android:layout_alignRight="@+id/btn2"
+        android:layout_alignEnd="@+id/btn2" />
+
+
+</RelativeLayout>

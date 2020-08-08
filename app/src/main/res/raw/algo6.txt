@@ -1,0 +1,52 @@
+///Given an array for each query (l,r) find
+///pow(a[l],pow(a[l+1],pow….a[r])%mod
+#define MOD(a,b) ((a<b)?a:b+a%b)
+    ll qpow(ll n,ll k,ll mod)
+{
+    ll ans=1;
+    while(k)
+    {
+        if(k&1)
+            ans=MOD(ans*n,mod);
+        n=MOD(n*n,mod);
+        k>>=1;
+    }
+    return ans;
+}
+ll a[N];
+map<ll,ll>mp;
+ll phi(ll n)
+{
+    if(mp.count(n)) return mp[n];
+    ll i,ans=n,store=n;
+    for(i=2; i*i<=n; i++)
+    {
+        if(n%i==0)
+        {
+            while(n%i==0) n/=i;
+            ans=ans/i*(i-1);
+        }
+    }
+    if(n>1) ans=ans/n*(n-1);
+    return mp[store]=ans;
+}
+ll yo(ll l,ll r,ll mod)
+{
+    if(l==r) return MOD(a[l],mod);
+    if(mod==1) return 1;
+    else return qpow(a[l],yo(l+1,r,phi(mod)),mod);
+}
+int main()
+{
+    BeatMeScanf;
+    ll i,j,k,n,m,mod,q,l,r;
+    cin>>n>>mod;
+    for(i=1; i<=n; i++) cin>>a[i];
+    cin>>q;
+    while(q--)
+    {
+        cin>>l>>r;
+        cout<<yo(l,r,mod)%mod<<nl;
+    }
+    return 0;
+}

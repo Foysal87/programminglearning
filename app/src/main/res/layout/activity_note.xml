@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bac7ef"
+    tools:context="com.example.foysal.programminglearning.Algorithm_item">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/notesToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#CE0A0A"
+        android:titleTextColor="#131212"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="11dp"></android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteList"
+        android:padding="5dp"
+        android:dividerHeight="2dp"
+        android:divider="#383b69"
+        android:listSelector="#08e738"
+        android:background="#527359"
+        android:layout_below="@+id/notesToolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+</RelativeLayout>

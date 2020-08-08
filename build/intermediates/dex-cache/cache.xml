@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\27147445c0d9460ec1f76fc6bfcbf7f6e0a2cc6d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_f5e97792e4a2c7eae183d8eddfda767c6d86e294.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_abaae425984611607bcff89f6038db79838d8a06.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\8959b8161853f7c73e81a8a0c0cf51867f33f6c9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_edbcd7aad2e91592fe57a14066b8e55aab29bd5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\8877652dc43eff0ebdbaff4aa799689ef28cff2e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_5a7d5349b5cf18d060f41cf76594b8d8d6c01c26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\6e798fc3fe3e67fd49be2e012da603095febb567\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_5106b1605a17dff808c2598c9e69d4bcd9c056dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\ac486c72d601f41eebe87729a7fc11b8243c2141\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_724b80746a40714cf6617a6d5d2007dc0d2a2a34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\472d3b8937ab1a647a8af62bd15adb4181e68591\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_96bade5cbd68c77a882adc4b34a4badbba1e9730.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\2c267accd93ef2f92952cf1a84a3fcf18f52d1b5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_f345bc3b601ef565c54be1fc9793d5e81e2d10ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\9e47dc3a0663150bce5f351b1d2d2e9f8061f433\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_b012c8906e921471c38eef08206b41e2f5261b44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\af10489f0cffbab40b860694842d2d9c1d995ce7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_5ef732d710699fb1aa0779a563aee450d55b768f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\6d38858479daeb66a0249bb53ea0d05c41c31f04\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_82c6f4427b50f69498b6397e683fc1f2b2bbcf38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\c53e09215b54abc6da2a8f2c585a36a9d34d4432\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_bfdf8c1747fd5acf9736eac88cea399a6c675c24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\542b187e373737e7cc8845df61bd9e32f8cea585\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_960b07e03cc478974b53bf9f4f5c77bf885a778b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_cd3c0b39e6b023cec76d2693b2be2980d2e77b7e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Foysal\.android\build-cache\d748b321c067031c2ee11bea4b313a7321e554d1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\Foysal\AndroidStudioProjects\ProgrammingLearning\app\build\intermediates\pre-dexed\debug\classes_01e2edaee7c98f787307f402af2dff522e58561f.jar" />
+    </item>
+
+</items>
